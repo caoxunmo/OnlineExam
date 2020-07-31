@@ -52,7 +52,7 @@ class LoginClass():
 if __name__ == '__main__':
     lg = LoginClass()
     res = lg.login('POST', userData)
-    print(res)
+    print(res, type(res))
 # pprint.pprint(res)
 # print(type(testData))
 

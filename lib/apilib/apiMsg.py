@@ -14,15 +14,16 @@ class MsgClass:
         return resp.json()
 
 
-# 获取登录的Token值
-resp = LoginClass().login('POST', userData)
-token = resp['token']
-print(f'登录返回的Token值：{token}')
+if __name__ == '__main__':
+    # 获取登录的Token值
+    resp = LoginClass().login('POST', userData)
+    token = resp['token']
+    print(f'登录返回的Token值：{token}')
 
-# 验证留言接口
-msg = MsgClass()
-res = msg.add_msg(inToken=token, inData=msgData)
-pprint(res)
+    # 验证留言接口
+    msg = MsgClass()
+    res = msg.add_msg(inToken=token, inData=msgData)
+    pprint(res)
 
 
 
